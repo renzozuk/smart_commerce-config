@@ -12,7 +12,6 @@ spring:
       observations:
         log-prompt: false
     openai:
-      api-key: ${vcap:application:API_KEY}
       base-url: https://generativelanguage.googleapis.com/v1beta/openai
       chat:
         completions-path: /chat/completions
@@ -20,7 +19,6 @@ spring:
           model: gemini-2.0-flash
           temperature: 0.0
       embedding:
-        api-key: ${vcap:application:API_KEY}
         base-url: https://generativelanguage.googleapis.com/v1beta/openai
         options:
           model: text-embedding-004
