@@ -6,27 +6,3 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka,http://server2:8762/eureka,http://server3:8763/eureka
-spring:
-  ai:
-    chat:
-      observations:
-        log-prompt: false
-    openai:
-      api-key: ${API_KEY}
-      base-url: https://generativelanguage.googleapis.com/v1beta/openai
-      chat:
-        completions-path: /chat/completions
-        options:
-          model: gemini-2.5-flash
-          temperature: 0.0
-      embedding:
-        api-key: ${API_KEY}
-        base-url: https://generativelanguage.googleapis.com/v1beta/openai
-        options:
-          model: text-embedding-004
-          dimensions: 768
-        embeddings-path: /embeddings
-    vectorstore:
-      simple:
-        store:
-          path: ./vectorstore.json
