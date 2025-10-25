@@ -8,6 +8,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka,http://server2:8762/eureka,http://server3:8763/eureka
 spring:
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/inventory
+    url: r2dbc:postgresql://localhost:5432/inventory_reactive
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
+  sql:
+    init:
+      mode: always
