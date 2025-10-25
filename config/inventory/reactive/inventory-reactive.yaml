@@ -11,6 +11,3 @@ spring:
     url: r2dbc:postgresql://localhost:5432/inventory_reactive
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-  sql:
-    init:
-      mode: never
